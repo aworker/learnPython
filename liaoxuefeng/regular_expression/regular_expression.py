@@ -49,7 +49,7 @@ s = r'[P|p]ython'  #可以匹配Python 或者python这两种字符
 match = re.match(s, 'Python')
 print(match)
 
-# ^表示开头必须是某种字符 $表示结尾必须是某种字符
+# ^表示行的开头必须是某种字符 $表示行的结尾必须是某种字符
 
 
 # python 中用()表示要提取的分组
