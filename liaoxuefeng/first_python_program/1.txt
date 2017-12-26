@@ -1,0 +1,5 @@
+只要在 py文件的第一行加入如下注释：
+#!/usr/bin/env python3
+
+然后给py文件以x权限
+就可以让python文件像shell脚本那样运行了啊

@@ -17,7 +17,6 @@ train_input_fn = tf.estimator.inputs.numpy_input_fn({"x":x_train},y_train,batch_
 eval_input_fn = tf.estimator.inputs.numpy_input_fn({"x":x_eval},y_eval,batch_size=4,num_epochs=1000,shuffle= True)
 
 estimator.train(input_fn= input_fn)
-input_fn.
 
 
 
