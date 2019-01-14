@@ -1,0 +1,11 @@
+
+iprd=10.200.17.11,10.200.17.12,10.200.17.13,10.200.17.75,10.200.17.76,10.200.17.77,10.200.18.71,10.200.18.72,10.200.18.73
+
+# your pin id
+pin=445566
+
+# path of your script for xshell
+scriptDir = D:\limingyuan001\vbsScript
+
+# path of your xsh files:
+# xshDir = "D:\limingyuan001\AppData\Roaming\\NetSarang\Xshell\Sessions"
