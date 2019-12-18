@@ -1,0 +1,15 @@
+CREATE TABLE `mls_pc_relation_001` (
+  `id` bigint(19) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `entity_id` bigint(19) NOT NULL DEFAULT '0' COMMENT '实体ID',
+  `entity_status` int(5) NOT NULL DEFAULT '0' COMMENT '房源委托状态,(0,"无效"),(1,"有效"),(10,"过户"),(100,"成交锁定"),(1000,"已成交")',
+  `relation_type` varchar(20) NOT NULL DEFAULT '' COMMENT '关系类型,show:带看,follow:关注',
+  `relation_ucid` bigint(19) NOT NULL DEFAULT '0' COMMENT '产生关系的经纪人id',
+  `relation_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '产生关系时间',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `relation_status` int(5) NOT NULL DEFAULT '1' COMMENT '关系状态,1:有效,0:无效',
+  `entity_type` int(5) NOT NULL DEFAULT '0',
+  `ext_info` varchar(8192) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `idx_entity_relation_user` (`entity_id`,`relation_ucid`,`relation_type`,`relation_status`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='房源关系表';
